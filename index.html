@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <title>Arsenal</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.min.css" />
+        <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css"/>
+        <meta name="viewport" content="width=device-width,  initial-scale=1" />
+    </head>
+    <body>
+        
+
+        <main class="main">
+            <div class="catalog">
+                <div class="container white">
+
+                    <div class="catalog__content">
+                        <div class="catalog__top">
+                            <h1 class="page__title">Выберите квартиру</h1>
+
+                            <div class="catalog__controls">
+                                <button class="control__text link_text">выбрать на плане</button>
+                                <div class="controls__list">
+                                    <div class="controls__filters">
+                                        
+                                        <div class="controls__item active">
+                                           
+                                            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="a" x="3" y="6" width="18" height="12" mask-type="alpha" maskUnits="userSpaceOnUse">
+                                                <path d="m3 18h6v-2h-6v2zm0-12v2h18v-2h-18zm0 7h12v-2h-12v2z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd"/>
+                                                </mask>
+                                                <g mask="url(#a)">
+                                                    <path d="m-13-13h50v50h-50v-50z" clip-rule="evenodd" fill="#888784" fill-rule="evenodd"/>
+                                                    <mask x="-13" y="-13" width="50" height="50" mask-type="alpha" maskUnits="userSpaceOnUse">
+                                                    <path d="m-13-13h50v50h-50v-50z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd"/>
+                                                    </mask>
+                                                </g>
+                                            </svg>
+
+                                            <span class="text">по площади</span>
+                                        </div>
+
+                                        <div class="controls__item">
+                                           
+                                            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="a" x="3" y="6" width="18" height="12" mask-type="alpha" maskUnits="userSpaceOnUse">
+                                                <path d="m3 18h6v-2h-6v2zm0-12v2h18v-2h-18zm0 7h12v-2h-12v2z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd"/>
+                                                </mask>
+                                                <g mask="url(#a)">
+                                                    <path d="m-13-13h50v50h-50v-50z" clip-rule="evenodd" fill="#888784" fill-rule="evenodd"/>
+                                                    <mask x="-13" y="-13" width="50" height="50" mask-type="alpha" maskUnits="userSpaceOnUse">
+                                                    <path d="m-13-13h50v50h-50v-50z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd"/>
+                                                    </mask>
+                                                </g>
+                                            </svg>
+
+                                            <span class="text">по цене</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="controls__view_type">
+                                        <button class="type__item active" data-type="card">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="8" height="8.30769" fill="#888784"/>
+                                                <rect x="10" width="8" height="8.30769" fill="#888784"/>
+                                                <rect y="9.69229" width="8" height="8.30769" fill="#888784"/>
+                                                <rect x="10" y="9.69229" width="8" height="8.30769" fill="#888784"/>
+                                            </svg>                                                
+                                        </button>
+
+                                        <button class="type__item" data-type="list">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="18" height="8.30769" fill="#888784"/>
+                                                <rect y="9.69229" width="18" height="8.30769" fill="#888784"/>
+                                            </svg>                                                
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter_btn_wr">
+                            <div class="filter_btn_mobile">
+                                <h2 class="filter__title square">Фильтры</h2>
+                            </div>
+                            <div class="filter__active_values">
+                                
+                                <div class="filter_value">
+                                    <span class="filter_value__text">от 3 млн. до 4.5 млн.</span>
+                                    <button class="filter_value__hide">
+                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 1L1 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 1L5 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                                
+                                    </button>
+                                </div>
+
+                                <div class="filter_value">
+                                    <span class="filter_value__text">2 комнаты</span>
+                                    <button class="filter_value__hide">
+                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 1L1 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 1L5 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                                
+                                    </button>
+                                </div>
+
+                                <div class="filter_value">
+                                    <span class="filter_value__text">2-4 этаж</span>
+                                    <button class="filter_value__hide">
+                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 1L1 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 1L5 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                                
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog__controls catalog__controls--mobile">
+                            <div class="controls__list">
+                                <div class="controls__filters">
+                                    
+                                    <div class="controls__item active">
+                                       
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="6" width="18" height="12">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 18H9V16H3V18ZM3 6V8H21V6H3ZM3 13H15V11H3V13Z" fill="white"/>
+                                            </mask>
+                                            <g mask="url(#mask0)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M-13 -13H37V37H-13V-13Z" fill="#888784"/>
+                                            <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="-13" y="-13" width="50" height="50">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M-13 -13H37V37H-13V-13Z" fill="white"/>
+                                            </mask>
+                                            </g>
+                                        </svg>
+                                            
+
+                                        <span class="text">по площади</span>
+                                    </div>
+
+                                    <div class="controls__item">
+                                       
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="6" width="18" height="12">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 18H9V16H3V18ZM3 6V8H21V6H3ZM3 13H15V11H3V13Z" fill="white"/>
+                                            </mask>
+                                            <g mask="url(#mask0)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M-13 -13H37V37H-13V-13Z" fill="#888784"/>
+                                            <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="-13" y="-13" width="50" height="50">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M-13 -13H37V37H-13V-13Z" fill="white"/>
+                                            </mask>
+                                            </g>
+                                        </svg>
+
+                                        <span class="text">по цене</span>
+                                    </div>
+                                </div>
+
+                                <div class="controls__view_type">
+                                    <button class="type__item active" data-type="card">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="8" height="8.30769" fill="#888784"/>
+                                            <rect x="10" width="8" height="8.30769" fill="#888784"/>
+                                            <rect y="9.69229" width="8" height="8.30769" fill="#888784"/>
+                                            <rect x="10" y="9.69229" width="8" height="8.30769" fill="#888784"/>
+                                        </svg>                                                
+                                    </button>
+
+                                    <button class="type__item" data-type="list">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="18" height="8.30769" fill="#888784"/>
+                                            <rect y="9.69229" width="18" height="8.30769" fill="#888784"/>
+                                        </svg>                                                
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalog__block">
+                            <aside class="filter">
+                                <div class="filter__inner">
+                                    <h2 class="filter__title square">Параметры</h2>
+                            
+                                    <div class="filter__items">
+                            
+                                        <div class="filter__item">
+                                            <h3 class="title">Корпус <div class="tooltip_parent"></div></h3>
+                                            <div class="btn-group btn-select btn-select--checkbox">
+                                                <button type="button" class="btn dropdown-toggle">
+                                                  <span></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li>                        
+                                                        <label>
+                                                            <input type="checkbox" class="select_all">
+                                                            <div class="checkmark"></div>
+                                                            <span class="input_text">Выбрать все</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label>
+                                                            <input type="checkbox" checked>
+                                                            <div class="checkmark"></div>
+                                                            <span class="input_text"><span class="input_main_text">Дом 3. </span> <span class="success">Сдан</span></span>
+                                                        </label>
+                                                    </li>
+                                                     <li>
+                                                        <label>
+                                                            <input type="checkbox">
+                                                            <div class="checkmark"></div>
+                                                            <span class="input_text"><span class="input_main_text"> Дом 4. </span><span class="secondary">Cдача в 1кв. 2020 г.</span></span>
+                                                        </label>
+                                                    </li>
+                                                     <li>
+                                                        <label>
+                                                            <input type="checkbox">
+                                                            <div class="checkmark"></div>
+                                                            <span class="input_text"><span class="input_main_text">Дополнительный</span> </span>
+                                                        </label>
+                                                    </li>
+                                                     <li>
+                                                        <label>
+                                                            <input type="checkbox">
+                                                            <div class="checkmark"></div>
+                                                            <span class="input_text"><span class="input_main_text">Новый пункт</span> </span>
+                                                        </label>
+                                                    </li>
+                                                     <li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="filter__item">
+                                            <h3 class="title">Цена <div class="tooltip_parent"></div></h3>
+                                
+                                            <div id="price_range"></div>
+                                        </div>
+                                
+                                        <div class="filter__item">
+                                            <h3 class="title">Комнаты <div class="tooltip_parent"></div></h3>
+                                
+                                            <ul class="rectangle__list">
+                                                
+                                                <li class="rectangle__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <div class="rectangle">C</div>                        
+                                                    </label>
+                                                </li>
+                                
+                                                <li class="rectangle__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <div class="rectangle">1</div>                        
+                                                    </label>
+                                                </li>
+                                
+                                                <li class="rectangle__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <div class="rectangle">2e</div>                        
+                                                    </label>
+                                                </li>
+                                
+                                                <li class="rectangle__item">
+                                                    <label>
+                                                        <input type="checkbox" disabled>
+                                                        <div class="rectangle">2</div>                        
+                                                    </label>
+                                                </li>
+                                
+                                                <li class="rectangle__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <div class="rectangle">3</div>                        
+                                                    </label>
+                                                </li>
+                                
+                                                <li class="rectangle__item">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <div class="rectangle">3e</div>                        
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                
+                                        <div class="filter__item">
+                                            <h3 class="title">Этаж <div class="tooltip_parent"></div></h3>
+                                
+                                            <div id="floor_range"></div>
+                                        </div>
+                                
+                                        <div class="filter__item">
+                                            <h3 class="title">Площадь <div class="tooltip_parent"></div></h3>
+                                
+                                            <div id="square_range"></div>
+                                        </div>
+                            
+                                    </div>
+                            
+                                    <div class="filter__btns">
+                                        <button class="white">Посмотреть</button>
+                            
+                                        <div class="filter__result">
+                                            <span class="text">Нашлось</span>
+                                            <span class="result"><span class="counter">126 </span> квартир</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                            <div class="flats">
+                                <div class="flats__inner">
+                                    
+                                    <a href="#" class="flat">
+                                        <div class="flat__img_wr">
+                                            <img src="img/content/flat_1.svg" alt="" class="flat__img">
+                                        </div>
+                                        
+                                        <div class="flat__info">
+                                            <div class="flat__info_item">1к.кв</div>
+                                            <div class="flat__info_item">36,3 м2</div>
+                                            <div class="flat__info_item flat__info_item--status flat__info_item--status_list">Корпус 3</div>
+                                            <div class="flat__info_item flat__info_item--floor">2 этаж</div>
+                                            <div class="flat__info_item flat__info_item--price">10 768 000 ₽</div>
+                                            <div class="flat__info_item flat__info_item--status">Корпус 3 - 1 кв. 2020 г.</div>
+                                        </div>
+                                    </a>
+                            
+                                    <a href="#" class="flat">
+                                        <div class="flat__img_wr">
+                                            <img src="img/content/flat_1.svg" alt="" class="flat__img">
+                                        </div>
+                                        
+                                        <div class="flat__info">
+                                            <div class="flat__info_item">1к.кв</div>
+                                            <div class="flat__info_item">36,3 м2</div>
+                                            <div class="flat__info_item flat__info_item--status flat__info_item--status_list">Корпус 3</div>
+                                            <div class="flat__info_item flat__info_item--floor">2 этаж</div>
+                                            <div class="flat__info_item flat__info_item--price">10 768 000 ₽</div>
+                                            <div class="flat__info_item flat__info_item--status">Корпус 3 - 1 кв. 2020 г.</div>
+                                        </div>
+                                    </a>
+                            
+                                    <a href="#" class="flat">
+                                        <div class="flat__img_wr">
+                                            <img src="img/content/flat_2.svg" alt="" class="flat__img">
+                                        </div>
+                                        
+                                        <div class="flat__info">
+                                            <div class="flat__info_item">1к.кв</div>
+                                            <div class="flat__info_item">36,3 м2</div>
+                                            <div class="flat__info_item flat__info_item--status flat__info_item--status_list">Дом 3</div>
+                                            <div class="flat__info_item flat__info_item--floor">2 этаж</div>
+                                            <div class="flat__info_item flat__info_item--price">10 768 000 ₽</div>
+                                            <div class="flat__info_item flat__info_item--status">Корпус 3 - 1 кв. 2020 г.</div>
+                                        </div>
+                                    </a>
+                            
+                                    <a href="#" class="flat">
+                                        <div class="flat__img_wr">
+                                            <img src="img/content/flat_1.svg" alt="" class="flat__img">
+                                        </div>
+                                        
+                                        <div class="flat__info">
+                                            <div class="flat__info_item">1к.кв</div>
+                                            <div class="flat__info_item">36,3 м2</div>
+                                            <div class="flat__info_item flat__info_item--status flat__info_item--status_list">Корпус 3</div>
+                                            <div class="flat__info_item flat__info_item--floor">2 этаж</div>
+                                            <div class="flat__info_item flat__info_item--price">10 768 000 ₽</div>
+                                            <div class="flat__info_item flat__info_item--status">Корпус 3 - 1 кв. 2020 г.</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item page-item--arrow">
+                                            <a class="page-link" href="#">
+                                                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 15L1 8L8 1" stroke="#E54B4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>                    
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item page-item--arrow">
+                                            <a class="page-link" href="#">
+                                                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 15L8 8L1 1" stroke="#E54B4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>                        
+                                            </a>
+                                        </li>
+                                    </ul>
+                                  </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        
+        
+        <script src="libs/jquery/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="libs/swiper/swiper-bundle.min.js"></script>
+        <script src="libs/noUiSlider/nouislider.min.js"></script>
+        <script src="libs/noUiSlider/wNumb.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

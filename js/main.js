@@ -81,6 +81,22 @@ $(document).ready(function () {
         },
     });
 
+    // price range test (remove)
+    var priceSlider = document.getElementById("price_range1");
+
+    noUiSlider.create(priceSlider, {
+        start: [20, 100],
+        tooltips: [
+            wNumb({ suffix: " млн.", decimals: 0 }),
+            wNumb({ suffix: " млн.", decimals: 0 }),
+        ],
+        connect: true,
+        range: {
+            min: 0,
+            max: 200,
+        },
+    });
+
     // floor range
     var floorSlider = document.getElementById("floor_range");
 
@@ -124,7 +140,16 @@ $(document).ready(function () {
 
     // change filter control
     $(document).on("click", ".controls__item", function () {
-        $(this).addClass("active").siblings().removeClass("active");
+        $(this).addClass("active").siblings().removeClass("active increase");
+
+        if($(this).hasClass('active')) {
+            if($(this).hasClass('increase')) {
+                $(this).removeClass('increase')
+            } else {
+                $(this).addClass('increase')
+            }
+            
+        } 
     });
 
     // show filter on mobile
